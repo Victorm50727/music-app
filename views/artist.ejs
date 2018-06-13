@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>  
+</head>
+<body>
+   <nav>
+    <div class="nav-wrapper cyan">
+      <a href="/" class="brand-logo">Music App</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/about-app">About App</a></li>
+        <li><a href="/music">Music</a></li>
+        <li><a href="/artist">Artist</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+      <h1>Results</h1>
+      <% data.artist_list.forEach(function(item) { %>
+      <% console.log(JSON.stringify(item)) %>
+        <h2>
+          <%= item.artist.artist_name %>
+        </h2>
+        <ul>
+          <li>
+            Country: 
+            <%= item.artist.artist_country %>
+          </li>
+          <li>
+            Rating:
+            <%= item.artist.artist_rating %>
+          </li>
+          <li>
+            Genres:
+            <ul>
+            <% item.artist.primary_genres.music_genre_list.forEach(function(thing){ %>
+              <li><%= thing.music_genre.music_genre_name %></li>
+            <% }) %>
+            </ul>
+          </li>
+          <li>
+            Social media:
+            <%= item.artist.artist_twitter_url %>
+          </li>
+        </ul>
+      <% }) %>
+  </div>
+</body> 

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+    </head>
+    <body>
+    <nav>
+    <div class="nav-wrapper black">
+      <a href="/" class="brand-logo cyan">Music App</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/about-app" class= "orange darken-4">About App</a></li>
+        <li><a href="/music" class= "lime accent-2">Music</a></li>
+        <li><a href="/artist" class= "light-green darken-4">Artist</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <div class="container">
+
+      <h2>Hello, and welcome to our App!</h2>
+      <p>If you need information about any artist of your choice, please go to the artist page and input the name of the artist in the search bar.</p>
+      <p2>Looking for the lycis for song? Please go the music page and input the name of the song.</p2>
+      <div class="container">
+          <h1>Artist</h1>
+          <form action="/artist" method="POST">
+            <p>Enter an artist here: <input name="searchTerm" id="searchTerm"></p>
+            <button type="submit" class="btn btn-primary" >Submit</button>
+          </form>
+      </div>
+  </div>
+</body>
